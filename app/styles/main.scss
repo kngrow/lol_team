@@ -4,18 +4,35 @@ $tyoiusu : #00B4CC;
 $maausu: #008C9E;
 $ussu : #005F6B;
 
+@mixin color {
+    color :$rightblue;
+}
+
+@mixin summoner_list_area ($value){
+        height : $value ;
+}
+
 
 html , body {
     background-color: $backcolor;
     .wapper {
         h1 {
-            color :$rightblue;
+            @include color;
         }
         .containter {
             margin : 0 15% 0 15%;
             background-color : $backcolor / 2;
             .tab_content > div {
-                color : $rightblue;
+                h2 {
+                    @include color;
+                }
+                .randam_summoner_list {
+                    @include summoner_list_area(5em);
+                }
+                .intrasquad_summoner_list {
+                    @include summoner_list_area(10em);
+                }
+                @include color;
             }
 
         }
