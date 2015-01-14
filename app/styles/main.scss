@@ -12,7 +12,6 @@ $ussu : #005F6B;
         height : $value ;
 }
 
-
 html , body {
     background-color: $backcolor;
     .wapper {
@@ -27,10 +26,10 @@ html , body {
                     @include color;
                 }
                 .randam_summoner_list {
-                    @include summoner_list_area(5em);
+                    @include summoner_list_area(7em);
                 }
                 .intrasquad_summoner_list {
-                    @include summoner_list_area(10em);
+                    @include summoner_list_area(11em);
                 }
                 @include color;
             }
