@@ -14,6 +14,7 @@ $(function(){
     return r;
   }
   $(document).foundation();
+
 var lane = ['top','jungle','mid','ADC','support'];
   $('#randam_start').on('click',function(){
     var Namearraylist = $('#randam_summoner_list').val().split('\n');
@@ -22,10 +23,14 @@ var lane = ['top','jungle','mid','ADC','support'];
         var randomlane = random(lane,5);
         console.log(Namearray);
         for(var i = 0 ; i<5 ;i++){
-          $('.result_ramdom').append(Namearray[i] + "→"+ randomlane[i] + "<br>");
-          // console.log(Namearray[i] + "→"+ randomlane[i]);
+          $('.result_ramdom').append(Namearray[i] + '→'+ randomlane[i] + '<br>');
         }
       }
+  });
+  $('#tweet').on('click' , function(){
+    var tweet_text = $('.result_ramdom').html().split('<br>').join('%0D%0A');
+
+    window.open("https://twitter.com/intent/tweet?text=レーン決めました！%0D%0A" + tweet_text);
   });
 
 });
