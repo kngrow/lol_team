@@ -18,22 +18,21 @@ html , body {
         h1 {
             @include color;
         }
-        .containter {
+        .contents {
             margin : 0 15% 0 15%;
             background-color : $backcolor / 2;
-            .tab_content > div {
+            .content {
                 h2 {
-                    @include color;
+                    color : $rightblue;
                 }
-                .randam_summoner_list {
+                color: $rightblue;
+                #randam_summoner_list {
                     @include summoner_list_area(7em);
                 }
-                .intrasquad_summoner_list {
-                    @include summoner_list_area(11em);
+                #intrasquad_summoner_list {
+                    @include summoner_list_area(13em);
                 }
-                @include color;
             }
-
         }
     }
 }

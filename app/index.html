@@ -21,27 +21,29 @@
 <body>
     <div class="wapper">
         <h1> lol randam team builder </h1>
-        <div class="containter">
-        <ul class="tabs">
-            <li><a href="#lane">lane randam</a></li>
-            <li><a href="#intrasquad">intrasquad game team builder</a></li>
-        </ul>
-        <div class="tab_content">
-            <div id="lane">
-                <h2>lane Randam</h2>
-                <span>レーンで迷ったら下のテキストエリアにsummonerNameを入れてランダム！</span>
-                <textarea class="randam_summoner_list" placeholder="aさん
+        <div class="contents">
+            <dl class="tabs" data-tab>
+                <dd class="active"><a href="#lane">Lane Randam</a></dd>
+                <dd><a href="#intrasquad">Intrasquad game team builder</a></dd>
+            </dl>
+            <div class="tabs-content">
+                <div class="content active" id="lane">
+                    <h2>lane Randam</h2>
+                    <span>レーンで迷ったら下のテキストエリアにsummonerNameを入れてランダム！</span>
+                    <textarea id="randam_summoner_list"  placeholder="aさん
 bさん
 cさん
 dさん
 eさん
 "></textarea>
-<div class="center"><button class="button small">ランダムで決める！</button></div>
-            </div>
-            <div id="intrasquad">
-                <h2>intrasquad game team builder</h2>
-                <span>紅白戦のチーム分けをするよ〜〜</span>
-                <textarea class="intrasquad_summoner_list"  placeholder="aさん
+    <div class="large-offset-10"><button name="button small" id="randam_start">決めた！</button></div>
+    <div class="result_ramdom">
+    </div>
+                </div>
+                <div class="content" id="intrasquad">
+                    <h2>intrasquad game team builder</h2>
+                    <span>紅白戦のチーム分けをするよ〜〜</span>
+                    <textarea id="intrasquad_summoner_list"  placeholder="aさん
 bさん
 cさん
 dさん
@@ -51,10 +53,12 @@ gさん
 hさん
 iさん
 jさん
-                "></textarea>
+"></textarea>
+
+                </div>
             </div>
         </div>
-</div>
+    </div>
 
 
     <!-- build:js(.) scripts/vendor.js -->
